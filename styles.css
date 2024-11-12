@@ -8,7 +8,7 @@
 /* Body and Background */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     color: black;
 }
 
@@ -39,6 +39,20 @@ header nav ul {
     background-color: white;
     border-radius: 0px;
 }
+
+header .title {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2px 15px;
+    background-color: white;
+    border-radius: 0px;
+    position: absolute;
+    top: 50%;           /* Center vertically */
+    left: 50%;          /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+}
+
 
 header nav ul li {
     margin-left: 20px;
@@ -370,3 +384,67 @@ header nav ul {
 
 
 }
+
+.work-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-item {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background overlay */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-email {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.team-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust as needed for spacing between images */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.team-page img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 4px; /* Optional rounded edges */
+}
+

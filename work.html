@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Preloader HTML -->
-    <div id="preloader">
-        <img src="Media/loader.gif" alt="Loading..." id="loader-gif"> <!-- Replace with your .gif -->
-    </div>
 
     <header>
         <div class="logo">
@@ -31,24 +27,22 @@
         </nav>
     </header>
     
+    
     <!-- Darkened backdrop -->
     <div id="backdrop" class="backdrop"></div>
     
-
-    <section class="hero">
-        <video autoplay muted loop class="hero-video">
-            <source src="Media/Banner.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <button class="reel-button"><b>REEL</b></button>
-    </section>
-    
-    <!-- Video Overlay -->
-    <div id="video-overlay" class="video-overlay">
-        <button id="close-video" class="close-video">X</button>
-        <!-- Vimeo iframe for video -->
-        <iframe id="vimeo-player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div class="work-page">
+        <div class="work-item">
+            <img src="/Media/image1.jpg" alt="Work Image 1">
+            <div class="work-title">Title 1</div>
+        </div>
+        <div class="work-item">
+            <img src="image2.jpg" alt="Work Image 2">
+            <div class="work-title">Title 2</div>
+        </div>
+        <!-- Add more work items as needed -->
     </div>
+    
     
 
     <script src="script.js"></script>
