@@ -18,23 +18,3 @@ closeButton.addEventListener('click', () => {
     videoOverlay.style.display = 'none'; // Hide overlay
     vimeoPlayer.src = ''; // Stop the video
 });
-
-// Select elements
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.querySelector('nav');
-const backdrop = document.getElementById('backdrop');
-
-// Toggle the 'open' class when the hamburger icon is clicked
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open'); // Toggle the visibility of the menu
-    backdrop.classList.toggle('show'); // Toggle backdrop visibility
-    menuToggle.classList.toggle('open'); // Toggle hamburger to X transition
-});
-
-// Close the menu when the backdrop is clicked
-backdrop.addEventListener('click', () => {
-    navLinks.classList.remove('open'); // Hide the menu
-    backdrop.classList.remove('show'); // Hide the backdrop
-    menuToggle.classList.remove('open'); // Reset hamburger icon
-});
-

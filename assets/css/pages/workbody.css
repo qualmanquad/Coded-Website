@@ -1,0 +1,95 @@
+.work-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 4; /* Maintains a responsive 16:9 aspect ratio */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* White overlay that will appear on hover */
+.work-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+/* Title styling */
+.work-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.5rem; /* Use relative font-size for better scaling */
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+/* Hover effect: overlay fades to white, title becomes visible */
+.work-item:hover::before {
+    background-color: rgba(255, 255, 255, 0.1); /* Dim to white */
+}
+
+.work-item:hover .work-title {
+    opacity: 1; /* Show the title */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .work-title {
+        font-size: 1.2rem; /* Smaller font on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .work-title {
+        font-size: 1rem; /* Even smaller font on small screens */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        background-color: #000; /* Black background for the header */
+        color: #ffffff;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+    }
+
+    .work-title {
+        opacity: 1; /* Make titles visible by default on small screens */
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .work-item:hover::before {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .work-title {
+        font-size: 1rem; /* Further reduce font size for extra small screens */
+    }
+}

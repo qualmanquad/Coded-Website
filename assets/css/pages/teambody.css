@@ -1,0 +1,17 @@
+.team-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust as needed for spacing between images */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.team-page img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 4px; /* Optional rounded edges */
+}

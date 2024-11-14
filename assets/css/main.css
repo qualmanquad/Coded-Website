@@ -1,0 +1,90 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body and Background */
+body {
+    font-family: 'Futura', sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: black;
+    text-transform: uppercase;
+
+}
+
+/* Header Styling */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0px;
+    background-color: white;
+    border-radius: 0px;
+}
+
+header .title {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2px 15px;
+    background-color: white;
+    border-radius: 0px;
+    position: absolute;
+    top: 50%;           /* Center vertically */
+    left: 50%;          /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+}
+
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+header .menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    /* Initially hide the navigation */
+    header nav {
+        display: none;
+    }
+
+    /* Show hamburger icon on mobile */
+    header .menu-toggle {
+        display: block;
+    }
+
+
+}
