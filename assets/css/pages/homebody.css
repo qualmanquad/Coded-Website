@@ -13,6 +13,7 @@
 }
 
 .reel-button {
+    font-family: 'Novecento Sans Wide', sans-serif;
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -24,6 +25,10 @@
     font-size: 12px;
     cursor: pointer;
     border-radius: 0px;
+}
+
+.reel-button:hover {
+    background-color: rgb(193, 193, 193);
 }
 
 /* Styling for the full-screen video overlay */

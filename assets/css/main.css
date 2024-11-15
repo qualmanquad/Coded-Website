@@ -5,15 +5,32 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Novecento Sans Wide';
+  src: url('/assets/font/Novecento sans/Novecento Sans Wide/Novecentosanswide-Normal.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ivy Presto Headline';
+  src: url('/assets/font/IvyPrestoHeadline/IvyPrestoHeadline-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
 
 /* Body and Background */
 body {
-    font-family: 'Futura', sans-serif;
-    background-color: rgb(0, 0, 0);
+    font-family: 'Novecento Sans Wide', sans-serif;
+
+    font-weight: 400;
+    background-color: rgb(255, 255, 255);
     color: black;
     text-transform: uppercase;
 
 }
+
+
 
 /* Header Styling */
 header {
@@ -38,34 +55,27 @@ header nav ul {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding: 0px;
+    padding: 5px;
     background-color: white;
     border-radius: 0px;
+    font-size: 12.5px;
 }
 
 header .title {
-    color: black;
+    color: rgb(255, 255, 255);
+    font-family: 'Ivy Presto Headline';
     font-weight: bold;
     font-size: 20px;
     padding: 2px 15px;
-    background-color: white;
-    border-radius: 0px;
-    position: absolute;
-    top: 50%;           /* Center vertically */
-    left: 50%;          /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact centering */
-}
-
-
-header nav ul li {
-    margin-left: 20px;
+    position: fixed;   /* Anchors to viewport, not header */
+    bottom: 0;         /* Anchors to the bottom */
+    left: 0;           /* Anchors to the left */
 }
 
 header nav ul li a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
-    padding: 10px;
+    padding: 2px;
 }
 
 header .menu-toggle {

@@ -7,12 +7,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/assets/images/image1.jpg'); /* Replace with the path to your image */
     background-size: cover;
     background-position: center;
     position: relative;
     color: white;
-    font-family: Arial, sans-serif;
     cursor: pointer;
 }
 
@@ -33,12 +31,13 @@
 /* Bottom-left paragraph text */
 .bottom-left-text {
     position: absolute;
+    font-family: 'Ivy Presto Headline', sans-serif;
     bottom: 20px;
     left: 20px;
     font-size: 1.2rem;
-    max-width: 300px;
+    max-width: 800px;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+    text-transform: uppercase;
     padding: 10px;
     border-radius: 5px;
     line-height: 1.4;
