@@ -1,0 +1,53 @@
+.thumbnail-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 10px; /* Space between thumbnails */
+    margin-top: 75px; /* Space between the main image and thumbnails */
+    width: 95%; /* Container takes up 80% of the viewport width */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+    margin-bottom: 75px;
+}
+
+.thumbnail {
+    position: relative; /* For positioning background image and pseudo-element */
+    width: 100%; /* Take up full column width */
+    padding-top: 56.25%; /* 16:9 Aspect ratio (9 / 16 = 0.5625) */
+    background-size: cover; /* Ensure the image fills the thumbnail */
+    background-position: center; /* Center the image */
+    cursor: pointer;
+}
+
+/* Play button style */
+.thumbnail .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    font-size: 30px; /* Size of the play button */
+    color: white; /* White color */
+    width: 50px; /* Button size */
+    height: 50px; /* Button size */
+    display: flex;
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Horizontally center the icon */
+    cursor: pointer;
+    opacity: 1; /* Hide by default */
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    
+.thumbnail-container {
+    grid-template-columns: repeat(1, 1fr); /* Create 3 equal-width columns */
+    display: grid;
+    gap: 25px; /* Space between thumbnails */
+    margin-top: 60px; /* Space between the main image and thumbnails */
+    width: 88%; /* Container takes up 80% of the viewport width */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+    margin-bottom: 75px;
+
+}
+
+}

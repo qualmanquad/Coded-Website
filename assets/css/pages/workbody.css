@@ -38,7 +38,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    font-size: 1.5rem; /* Use relative font-size for better scaling */
+    font-size: 1rem; /* Use relative font-size for better scaling */
     font-weight: bold;
     text-align: center;
     opacity: 0;

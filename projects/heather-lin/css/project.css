@@ -1,0 +1,101 @@
+/* Full-page background image setup */
+.project-page, .background-image {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    cursor: pointer;
+}
+
+/* Centered play button */
+.play-button {
+    font-size: 50px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+/* Bottom-left paragraph text */
+.bottom-left-text {
+    position: absolute;
+    font-family: 'Ivy Presto Headline', sans-serif;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    max-width: 800px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 1.4;
+}
+
+/* Vimeo container hidden initially */
+.vimeo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with opacity */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the video overlay is above other elements */
+}
+
+/* Close button in the top-right corner */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background for the button */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighten button on hover */
+}
+
+#vimeo-video {
+    width: 80%;
+    height: 80%;
+}
+
+/* Dim header items when video overlay is active */
+.project-page.dim-header .header {
+    opacity: 0.3; /* Dimming header */
+    pointer-events: none; /* Disable interactions with dimmed header */
+}
+
+.project-page.dim-header .header a {
+    color: rgba(255, 255, 255, 0.6); /* Optional: Change link color for dimmed effect */
+}
+
+/* Ensure header elements have a lower z-index than the video overlay */
+.header {
+    z-index: 100; /* Lower z-index than the video overlay */
+}
