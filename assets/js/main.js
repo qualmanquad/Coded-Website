@@ -25,3 +25,10 @@ closeButton.addEventListener('click', () => {
     videoOverlay.style.display = 'none'; // Hide overlay
     vimeoPlayer.src = ''; // Stop the video
 });
+
+window.onload = () => {
+    document.body.style.opacity = 0;
+    setTimeout(() => {
+        document.body.style.opacity = 1;
+    }, 50);
+};
